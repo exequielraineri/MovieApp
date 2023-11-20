@@ -145,6 +145,39 @@ body {
   max-width: 300px;
 }
 
+
+
+.modal .modal-head, .modal .modal-body, .modal .modal-fot{
+  color:#f0f0f0;
+  background-color: #121212;
+  
+}
+
+.modal-body{
+  width: 100%;
+  columns: 2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.modal-body div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-body img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal-body p{
+  width: 100%;
+  border-bottom: rgba(255, 165, 0, 0.2) solid 1px;
+  text-align: end;
+}
+
+
 @media only screen and (max-width: 600px) {
 
 
