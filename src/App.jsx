@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import { Movie } from "./componentes/Movie"
 import "./css/styles.css";
 import { Encabezado } from "./componentes/Encabezado";
+import { Layout } from "./componentes/Layout";
+import { Link, Route, Routes } from "react-router-dom";
+import { SeccionPeliculas } from "./componentes/SeccionPeliculas";
 function App() {
 
   const API_URL = "https://www.omdbapi.com/?";
@@ -44,6 +47,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     fetchPeliculasAPI();
+
   }
 
 
@@ -54,17 +58,11 @@ function App() {
       <form className="formInput" onSubmit={handleSubmit}>
         <input type="text" placeholder="Buscar pelicula..." className="inputPelicula" onChange={(e) => setTitulo(e.target.value)} />
       </form>
-      <section className="section-peliculas">
-        {
-          peliculas.map((pelicula) => {
-            return <div title={pelicula.Title} className="bloque-pelicula" key={pelicula.imdbID} onClick={() => mostrar(pelicula.imdbID)}>
-              <Movie pelicula={pelicula} detalle={detallePelicula}></Movie>
-            </div>
-          })
-        }
-      </section>
+      <Routes>
+        <Route path="/" element={<SeccionPeliculas peliculas={peliculas} API_URL={API_URL} API_KEY={API_KEY}></SeccionPeliculas>}></Route>
+      </Routes>
       <hr />
-    </div>
+    </div >
   )
 }
 
