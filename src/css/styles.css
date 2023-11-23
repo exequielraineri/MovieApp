@@ -147,31 +147,33 @@ body {
 
 
 
-.modal .modal-head, .modal .modal-body, .modal .modal-fot{
-  color:#f0f0f0;
+.modal .modal-head,
+.modal .modal-body,
+.modal .modal-fot {
+  color: #f0f0f0;
   background-color: #121212;
-  
+
 }
 
-.modal-body{
+.modal-body {
   width: 100%;
   columns: 2;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.modal-body div{
+.modal-body div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.modal-body img{
+.modal-body img {
   width: 100%;
   border-radius: 10px;
 }
 
-.modal-body p{
+.modal-body p {
   width: 100%;
   border-bottom: rgba(255, 165, 0, 0.2) solid 1px;
   text-align: end;
@@ -213,4 +215,9 @@ body {
   .section-peliculas {
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+.modal {
+  opacity: 100%;
+  backdrop-filter: grayscale(100%) blur(1px);
 }
